@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: one
+  challenge: one
+  win: false
+  game: 1
+
+two:
+  player: two
+  challenge: two
+  win: false
+  game: 1

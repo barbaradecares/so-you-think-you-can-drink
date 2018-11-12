@@ -1,0 +1,2 @@
+class TurnsController < ApplicationController
+end
