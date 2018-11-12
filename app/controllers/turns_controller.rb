@@ -1,6 +1,6 @@
 class TurnsController < ApplicationController
 
-    def index
-
+    def show
+        
     end 
 end
