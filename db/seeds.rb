@@ -27,5 +27,3 @@ Challenge.create(video_url: 'https://www.youtube.com/embed/l5sIspLfmXM', drinks:
 Challenge.create(video_url: 'https://www.youtube.com/embed/4V90AmXnguw', drinks: 3, title: 'Thriller', description: "Oh boy oh boy oh boy. Thrill us. Worth 3 drinks.")
 Challenge.create(video_url: 'https://www.youtube.com/embed/4V90AmXnguw', drinks: 3, title: 'Time Warp', description: "You\'re just some sweet transvestites for this one. Do the Time Warp! Worth 3 drinks.")
 Challenge.create(video_url: 'https://www.youtube.com/embed/Vc0gYbTNctU', drinks: 1, title: 'Y.M.C.A.', description: "Alright, boys and girls. Worth 1 drink.")
-
-Turn.create!(player1_id: Player.first.id, player2_id: Player.second.id, challenge_id: Challenge.first.id)
