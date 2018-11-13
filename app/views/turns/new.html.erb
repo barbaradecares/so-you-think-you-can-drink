@@ -1,0 +1,14 @@
+<h1><%=@challenge.title%></h1>
+
+<h3><%=@player1.name%> x <%=@player2.name%></h3>
+<iframe width="560" height="315" src= <%=@challenge.video_url%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3> Who's the best? </h1>
+
+
+<%= form_for Turn.new do |f| %>
+    <%= f.label 'Choose the winner'%>
+    <%= f.collection_select :winner_id, [@player1, @player2], :id, :name %>
+    <br />
+    <%= f.submit %>
+<%end%>

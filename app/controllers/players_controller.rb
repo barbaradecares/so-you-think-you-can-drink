@@ -1,6 +1,7 @@
 class PlayersController < ApplicationController
 
     def new
+        @players = Player.all
         @player = Player.new
         # session[:number_of_players] = params
     end
@@ -9,7 +10,12 @@ class PlayersController < ApplicationController
         @player = Player.create(player_params)
         @player.update(number_of_wins: 0)
         @player.update(number_of_drinks: 0)
-        @@line << @player
+        redirect_to new_player_path
+    end
+
+    def destroy
+        Player.find(params[:id]).destroy
+
         redirect_to new_player_path
     end
 
