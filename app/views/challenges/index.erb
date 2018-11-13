@@ -1,0 +1,11 @@
+<h1>Challenges</h1>
+<ul>
+    <% @challenges.each do |challenge| %>
+    
+        <iframe width="560" height="315" src=<%=challenge.video_url%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <li>
+        <p><%=challenge.title%></p>
+
+    </li>
+    <% end %>
+</ul>
