@@ -46,6 +46,9 @@ class TurnsController < ApplicationController
         @ranking = Player.all.order(number_of_wins: :desc)
     end
 
+
+        
+ 
     def update_pts_drinks(turn)
         p1 = turn.player1
         p2 = turn.player2
