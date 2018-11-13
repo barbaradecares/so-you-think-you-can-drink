@@ -12,6 +12,20 @@ class TurnsController < ApplicationController
         end 
     end 
 
+    def update 
+        @turn = Turn.find(params[:id])
+        @turn.update(winner_id: define_winner)
+
+        if @turn.player1_id == @turn.winner_id
+            @@line << @turn.player2
+        else 
+            @@line << @turn.player1
+        end 
+    end 
+
+    def define_winner
+
+    end 
 
     def create_line
         @@line = []
