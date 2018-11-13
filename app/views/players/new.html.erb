@@ -16,7 +16,8 @@
 </ul>
 
 <br /><br />
-
-<%= link_to 'Begin Battles', '/turns/new'%>
+<% if @players.length >= 3 %>
+  <%= link_to 'Begin Battles', '/turns/new'%>
+<% end %>
 <br /><br />
 <%= link_to 'Back to Welcome', '/welcome' %>
