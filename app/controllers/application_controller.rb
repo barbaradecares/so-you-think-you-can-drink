@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
 
-    def index 
-        @url = 'https://www.youtube.com/watch?v=LoYYtYjB3h4'
-    end 
+    def index
+        Turn.destroy_all
+        Player.destroy_all
+    end
 
 end

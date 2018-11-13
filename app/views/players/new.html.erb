@@ -1,3 +1,4 @@
+<h1>Add Players: </h1>
 
 <%=form_for @player do |f|%>
     <%= f.label 'Name'%>
@@ -5,4 +6,17 @@
     <%= f.submit%>
 <% end %>
 
-<%= link_to 'Welcome', '/welcome' %>
+<br /><br />
+
+<h2>List of Players: </h2>
+<ul>
+    <%@players.each do |p|%>
+        <li><%=p.name%> <%= link_to 'Delete', p,  method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <%end%>
+</ul>
+
+<br /><br />
+
+<%= link_to 'Begin Battles', '/turns/new'%>
+<br /><br />
+<%= link_to 'Back to Welcome', '/welcome' %>
