@@ -9,6 +9,7 @@ class PlayersController < ApplicationController
         @player = Player.create(player_params)
         @player.update(number_of_wins: 0)
         @player.update(number_of_drinks: 0)
+        @@line << @player
         redirect_to new_player_path
     end
 
@@ -16,4 +17,5 @@ class PlayersController < ApplicationController
        params.require(:player).permit(:name, :number_of_wins, :number_of_drinks)
     end
 
+  
 end
