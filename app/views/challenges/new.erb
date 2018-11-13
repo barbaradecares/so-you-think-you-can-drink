@@ -1,0 +1,24 @@
+<h1>Create Challenge</h1>
+
+<%= form_for Challenge.new do |form| %>
+    <%= form.label 'Video URL'%>
+    <%= form.text_field :video_url %>
+    <br />
+    <%= form.label 'Drinks'%>
+    <%= form.text_field :drinks %>
+    <br />
+    <%= form.label 'Title'%>
+    <%= form.text_field :title %>
+    <br />
+    <%= form.label 'Description'%>
+    <%= form.text_field :description %>
+    <br />
+    <%= form.submit %>
+<% end %>
+
+<h3>Instructions for video URL:</h3>
+<p>1. On a computer, go to the YouTube video you want to embed</p>
+<p>2. Under the video, click SHARE</p>
+<p>3. Click Embed</p>
+<p>4. From the box that appears, copy the URL (after src and within the quotes) from the Embed Video</p>
+<p>5. Paste the code into your website Video URL</p>
