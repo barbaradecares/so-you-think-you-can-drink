@@ -5,10 +5,10 @@ class TurnsController < ApplicationController
         if Turn.all.empty?
             create_line
             @turn = Turn.create(player1: @@line[0], player2: @@line[1], challenge: Challenge.all.sample)
-            @@line.drop(2)
+            @@line.shift(2)
         else 
-            @turn = Turn.create(player2: @@line[0], challenge: Challenge.all.sample)
-            @@line.drop(2)
+            @turn = Turn.create(player1: Turn.last.winner_id, player2: @@line[0], challenge: Challenge.all.sample)
+            @@line.shift(2)
         end 
     end 
 
@@ -19,15 +19,4 @@ class TurnsController < ApplicationController
             @@line << p
         end
     end
-    
-    def define_previous_turn(turn)
-        Turn.find(turn.id - 1)
-    end 
-
-    def find_winner
-        Turn.find(@turn.id - 1).winner_id
-    end 
-
-
-    
 end
