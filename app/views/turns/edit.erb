@@ -1,7 +1,7 @@
 <h1>Voting</h1>
 
 <%@voters.each do |voter|%>
-   <p><%=voter.name%> votes for: 
+   <p><%=voter.name%> votes for:
 
     <%= form_for @turn do |t| %>
      <%= t.hidden_field :vote_p1, :value=> @turn.vote_p1 + 1 %>
@@ -12,9 +12,9 @@
      <%= t.hidden_field :vote_p2, :value=> @turn.vote_p2 + 1 %>
      <%= t.submit @turn.player2.name %>
    <% end %></p>
-   
+
 <% end %>
-   
- <% if @voters.length == @turn.vote_p1 + @turn.vote_p2 %>
+
+ <% if @voters.length <= @turn.vote_p1 + @turn.vote_p2 %>
         <button><%=link_to "We are ready!", turn_path(@turn)%></button>
     <% end %>
