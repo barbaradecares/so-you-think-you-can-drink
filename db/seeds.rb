@@ -25,5 +25,10 @@ Challenge.create(video_url: 'https://www.youtube.com/embed/h24_zoqu4_Q', drinks:
 Challenge.create(video_url: 'https://www.youtube.com/embed/LfNHGifUvSQ', drinks: 3, title: 'Keke', description: "Not as popular, but a goodie. We'll love you even if you can\'t do it. Worth 3 drinks.")
 Challenge.create(video_url: 'https://www.youtube.com/embed/l5sIspLfmXM', drinks: 1, title: 'Chicken Dance.', description: "Nuff said. Worth 1 drink.")
 Challenge.create(video_url: 'https://www.youtube.com/embed/4V90AmXnguw', drinks: 3, title: 'Thriller', description: "Oh boy oh boy oh boy. Thrill us. Worth 3 drinks.")
-Challenge.create(video_url: 'https://www.youtube.com/embed/4V90AmXnguw', drinks: 3, title: 'Time Warp', description: "You\'re just some sweet transvestites for this one. Do the Time Warp! Worth 3 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/umj0gu5nEGs', drinks: 3, title: 'Time Warp', description: "You\'re just some sweet transvestites for this one. Do the Time Warp! Worth 3 drinks.")
 Challenge.create(video_url: 'https://www.youtube.com/embed/Vc0gYbTNctU', drinks: 1, title: 'Y.M.C.A.', description: "Alright, boys and girls. Worth 1 drink.")
+
+
+Challenge.create(video_url: 'https://www.youtube.com/embed/uS8fYjT9bfc', drinks: 3, title: 'Dança da maozinha', description: "A delightful Brazilian classic. Worth 3 drinks (if you survive).")
+Challenge.create(video_url: 'https://www.youtube.com/embed/iTtmlGEXzY8', drinks: 4, title: 'Vai Malandra', description: "A Brazilian modern hit with a funky twist. Extra points for freestyling. Worth 4 drinks, you better do your best.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/eh4QQJyl-qA', drinks: 2, title: 'Bum bum tam tam', description: "Titillate us with your bum bum tam tam. Worth 2 drinks.")
