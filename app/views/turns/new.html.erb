@@ -7,8 +7,5 @@
 
 
 <%= form_for Turn.new do |f| %>
-    <%= f.label 'Choose the winner'%>
-    <%= f.collection_select :winner_id, [@player1, @player2], :id, :name %>
-    <br />
-    <%= f.submit 'Submit'%>
+    <%= f.submit 'Start Voting'%>
 <%end%>

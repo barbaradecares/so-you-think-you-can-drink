@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_12_183542) do
+ActiveRecord::Schema.define(version: 2018_11_14_060604) do
 
   create_table "challenges", force: :cascade do |t|
     t.string "video_url"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2018_11_12_183542) do
     t.integer "winner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "vote_p1"
+    t.integer "vote_p2"
     t.index ["challenge_id"], name: "index_turns_on_challenge_id"
   end
 

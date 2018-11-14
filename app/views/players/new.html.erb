@@ -11,13 +11,13 @@
 <h2>List of Players: </h2>
 <ul>
     <%@players.each do |p|%>
-        <li><%=p.name%> <%= link_to 'Delete', p,  method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        <li><%=p.name%> <button><%= link_to 'Delete', p,  method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
     <%end%>
 </ul>
 
 <br /><br />
 <% if @players.length >= 3 %>
-  <%= link_to 'Begin Battles', '/turns/new'%>
+  <button><%= link_to 'Begin Battles', '/turns/new'%></button>
 <% end %>
 <br /><br />
-<%= link_to 'Back to Welcome', '/welcome' %>
+<button><%= link_to 'Back to Welcome', '/welcome' %></button>
