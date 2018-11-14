@@ -1,6 +1,8 @@
-<h1><%=@challenge.title%></h1>
+<h1 class="player1"><%=@player1.name%></h1> <h3>vs.</h3> <h1 class="player1"><%=@player2.name%></h1>
 
-<h3><%=@player1.name%> x <%=@player2.name%></h3>
+<div><h3><%=@challenge.title%></h3></div>
+<div><h4><%=@challenge.description%></h4></div>
+
 <iframe width="560" height="315" src= <%=@challenge.video_url%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h3> Who's the best? </h1>
@@ -9,3 +11,4 @@
 <%= form_for Turn.new do |f| %>
     <%= f.submit 'Start Voting'%>
 <%end%>
+</div>

@@ -1,4 +1,4 @@
-<h1>Voting</h1>
+<div><h1>Voting</h1>
 
 <%@voters.each do |voter|%>
    <p><%=voter.name%> votes for:
@@ -18,3 +18,4 @@
  <% if @voters.length <= @turn.vote_p1 + @turn.vote_p2 %>
         <button><%=link_to "We are ready!", turn_path(@turn)%></button>
     <% end %>
+</div>

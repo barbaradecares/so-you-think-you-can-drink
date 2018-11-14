@@ -1,4 +1,4 @@
-<h1>And the winner is............... </h1>
+<div><h1>And the winner is............... </h1>
 <marquee><h1><%=@winner.name%></h2></marquee>
 <h2> <%=@loser.name%> has to take <%=@turn.challenge.drinks %> drinks</h2>
 
@@ -22,3 +22,4 @@
 <button><%= link_to "Next round", new_turn_path%></button>
 <br /> <br />
 <button><%= link_to "End Game", turns_path%></button>
+</div>
