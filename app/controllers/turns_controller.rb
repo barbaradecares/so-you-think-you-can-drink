@@ -47,12 +47,12 @@ class TurnsController < ApplicationController
         @turn = Turn.find(params[:id])
         @turn.update(turn_params)
 
-        if @turn.vote_p1 + @turn.vote_p2 == Player.all.count - 2 && @turn.vote_p1 > @turn.vote_p2
+        if @turn.vote_p1 + @turn.vote_p2 <= Player.all.count - 2 && @turn.vote_p1 > @turn.vote_p2
             @turn.update(winner_id: @turn.player1_id)
             update_line(@turn)
             update_pts_drinks(@turn)
 
-        elsif @turn.vote_p1 + @turn.vote_p2 == Player.all.count - 2 && @turn.vote_p2 > @turn.vote_p1
+        elsif @turn.vote_p1 + @turn.vote_p2 <= Player.all.count - 2 && @turn.vote_p2 > @turn.vote_p1
             @turn.update(winner_id: @turn.player2_id)
             update_line(@turn)
             update_pts_drinks(@turn)
