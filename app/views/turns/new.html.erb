@@ -1,11 +1,12 @@
 <h1 class="player1"><%=@player1.name.upcase%></h1> <h3 class="vs">vs.</h3> <h1 class="player1"><%=@player2.name.upcase%></h1>
 <br />
-<div><h3 class="challenge">Challenge: </h3><h2><%=@challenge.title%></h2></div>
+<div><h4 class="challenge">Challenge: </h4><h1 class="challenge"><%=@challenge.title%></h1></div>
+<br />
 <div><h4><%=@challenge.description%></h4></div>
 <br />
 <iframe width="560" height="315" src= <%=@challenge.video_url%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<h3> Who's the best? </h1>
+<br /><br />
+<h4> Who was the best? </h4>
 
 
 <%= form_for Turn.new do |f| %>

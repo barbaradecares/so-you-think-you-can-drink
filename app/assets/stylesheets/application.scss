@@ -5,17 +5,31 @@
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-h3.vs{
+h1.challenge{
+  font-family: 'Allerta Stencil', sans-serif;
   padding-left:2em
 }
 
-h2.welcome{
+h4.challenge{
   font-family: 'Pacifico', cursive;
-  color: red
+}
+
+h3.vs{
+  font-family: 'Allerta Stencil', sans-serif;
+  padding-left:2em
+}
+
+h1.welcome{
+  font-family: 'Pacifico', cursive;
 }
 
 h1.think{
   font-family: 'Allerta Stencil', sans-serif;
+  color: red
+}
+h1.nav{
+  font-family: 'Allerta Stencil', sans-serif;
+  color: white
 }
 
 html,body {
@@ -29,6 +43,30 @@ h1.player1 {
     animation-iteration-count: infinite;
     color: red
   }
+
+h3.instructions{
+  font-family: 'Pacifico', cursive;
+}
+
+button{
+  background-color: black
+}
+a:link{
+  color: white;
+}
+a:visited{
+  color: white;
+}
+a:hover{
+  color: white;
+}
+a:active{
+  color: white;
+}
+input[type=button], input[type=submit]{
+  color: white;
+   background-color:black;
+}
 
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
