@@ -1,8 +1,8 @@
-<h1 class="player1"><%=@player1.name.upcase%></h1> <h3>vs.</h3> <h1 class="player1"><%=@player2.name.upcase%></h1>
-
-<div><h3><%=@challenge.title%></h3></div>
+<h1 class="player1"><%=@player1.name.upcase%></h1> <h3 class="vs">vs.</h3> <h1 class="player1"><%=@player2.name.upcase%></h1>
+<br />
+<div><h3 class="challenge">Challenge: </h3><h2><%=@challenge.title%></h2></div>
 <div><h4><%=@challenge.description%></h4></div>
-
+<br />
 <iframe width="560" height="315" src= <%=@challenge.video_url%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h3> Who's the best? </h1>

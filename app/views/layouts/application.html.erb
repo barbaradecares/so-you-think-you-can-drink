@@ -13,10 +13,10 @@
 
   <body>
 
-  <div class="container">
-  <div class="row">
+  <div class="container-fluid h-100">
+  <div class="row justify-content-center h-100">
 
-  <div class="col-2" style="background-color:Black;"><%= render 'layouts/navigation' %></div>
+  <div class="col-2 hidden-md-down" style="background-color:Black;"><%= render 'layouts/navigation' %></div>
   <div class="col-10"><%= yield %></div>
 
   </div>

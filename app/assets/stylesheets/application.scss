@@ -1,8 +1,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+h3.vs{
+  padding-left:2em
+}
+
+h2.welcome{
+  font-family: 'Pacifico', cursive;
+  color: red
+}
+
+h1.think{
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+html,body {
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+}
 
 h1.player1 {
+    font-family: 'Allerta Stencil', sans-serif;
     animation: shake 0.5s;
     animation-iteration-count: infinite;
     color: red

@@ -8,7 +8,7 @@
 
 <br /><br />
 
-<h2>List of Players: </h2>
+<h4>List of Players: </h4>
 <ul>
     <%@players.each do |p|%>
         <li><%=p.name%> <button><%= link_to 'Delete', p,  method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
