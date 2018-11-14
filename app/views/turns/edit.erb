@@ -19,10 +19,17 @@
         <button><%=link_to "We have a winner!", turn_path(@turn)%></button>
     
   <% elsif @voters.length <= @turn.vote_p1 + @turn.vote_p2 && @turn.vote_p1 == @turn.vote_p2 %>
-    <p>Instructions for tie</p>
 
+    <br/>
+    <h2>Tie Breaker</h2>
+    <h3>Instructions for Rock Paper Scissors:</h3>
+    <p>1. To play “rock,” simply ball your hand up into a fist when you and your opponent shoot.</p>
+    <p>2. Throw “paper” by extending your hand palm down with your fingers outstretched.</p>
+    <p>3. For "scissors," use two fingers to mimic the shape of an open pair of scissors.</p>
+    <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AnRYS02tvRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+    <br/>
+    <br/>
     <p>The Rock Paper Scissors winner is: </p>
         <%= form_for @turn do |t| %>
           <%= t.hidden_field :vote_p1, :value=> @turn.vote_p1 + 1 %>
