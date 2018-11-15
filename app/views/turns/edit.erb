@@ -18,7 +18,8 @@
 <% end %>
 
  <% if @voters.length <= @turn.vote_p1 + @turn.vote_p2 && @turn.vote_p1 != @turn.vote_p2%>
-        <button><%=link_to "WE HAVE A WINNER!", turn_path(@turn)%></button>
+        <br /><br /><br /><br/><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <button class="winner"><%=link_to "WE HAVE A WINNER!!!", turn_path(@turn)%></button>
 
   <% elsif @voters.length <= @turn.vote_p1 + @turn.vote_p2 && @turn.vote_p1 == @turn.vote_p2 %>
 

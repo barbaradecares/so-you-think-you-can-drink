@@ -64,6 +64,18 @@ h1.player1 {
     color: red
   }
 
+button.winner {
+  font-size: 650%;
+  transform: rotate(-20deg);
+}
+
+.winner a:link {
+  color: red;
+}
+.winner a:visited {
+  color: red;
+}
+
 button{
   background-color: black
 }
