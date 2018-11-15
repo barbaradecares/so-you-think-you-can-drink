@@ -1,4 +1,5 @@
-<div><h1 class="h1cursiveRed">Voting</h1><br />
+<% if @voters.length > @turn.vote_p1 + @turn.vote_p2%>
+  <div><h1 class="h1cursiveRed">Voting</h1><br />
 
 <%@voters.each do |voter|%>
    <p><h4 class="h4stencilBlack"><%=voter.name.upcase%> VOTES FOR: </h4>
@@ -13,6 +14,7 @@
      <%= t.submit @turn.player2.name.upcase %>
    <% end %></p>
 
+<% end %>
 <% end %>
 
  <% if @voters.length <= @turn.vote_p1 + @turn.vote_p2 && @turn.vote_p1 != @turn.vote_p2%>
@@ -30,15 +32,15 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AnRYS02tvRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <br/>
     <br/>
-    <p>The Rock Paper Scissors winner is: </p>
+    <h4 class="h4cursiveBlack">The Rock Paper Scissors winner is: </h4>
         <%= form_for @turn do |t| %>
           <%= t.hidden_field :vote_p1, :value=> @turn.vote_p1 + 1 %>
-          <%= t.submit @turn.player1.name%>
+          <%= t.submit @turn.player1.name.upcase%>
         <% end %>
 
       <%= form_for @turn do |t| %>
           <%= t.hidden_field :vote_p2, :value=> @turn.vote_p2 + 1 %>
-          <%= t.submit @turn.player2.name%>
+          <%= t.submit @turn.player2.name.upcase%>
       <% end %>
       <% end %>
 </div>

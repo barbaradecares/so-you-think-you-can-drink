@@ -39,25 +39,16 @@ class TurnsController < ApplicationController
         @turn = Turn.find(params[:id])
         @voters = Player.all.select do |p|
             p.id != @turn.player1_id && p.id != @turn.player2_id
-        end     
+        end    
+        @votes = @turn.vote_p1 + @turn.vote_p2 
     end 
 
 
    def update
         @turn = Turn.find(params[:id])
-        @turn.update(turn_params)
+        
+        update_pts_drinks(@turn)
 
-        if @turn.vote_p1 + @turn.vote_p2 <= Player.all.count - 2 && @turn.vote_p1 > @turn.vote_p2
-            @turn.update(winner_id: @turn.player1_id)
-            update_line(@turn)
-            update_pts_drinks(@turn)
-
-        elsif @turn.vote_p1 + @turn.vote_p2 <= Player.all.count - 2 && @turn.vote_p2 > @turn.vote_p1
-            @turn.update(winner_id: @turn.player2_id)
-            update_line(@turn)
-            update_pts_drinks(@turn)
- 
-        end      
         redirect_to edit_turn_path
      end 
 
@@ -75,14 +66,29 @@ class TurnsController < ApplicationController
    end
 
     def update_pts_drinks(turn)
-        p1 = turn.player1
-        p2 = turn.player2
-        if turn.winner_id == p1.id
-            p1.update(number_of_wins: p1.number_of_wins + 1)
-            p2.update(number_of_drinks: p2.number_of_drinks + turn.challenge.drinks)
-        else
-            p2.update(number_of_wins: p2.number_of_wins + 1)
-            p1.update(number_of_drinks: p1.number_of_drinks + turn.challenge.drinks)
+        if turn_params[:vote_p1]
+            turn.update(vote_p1: turn_params[:vote_p1])
+            
+        elsif turn_params[:vote_p2]  
+            turn.update(vote_p2: turn_params[:vote_p2])
+        end 
+
+        voters = Player.all.length - 2
+        votes = turn.vote_p1 + turn.vote_p2
+         
+        if voters <= votes 
+            if turn.vote_p1 > turn.vote_p2
+                turn.player1.update(number_of_wins: turn.player1.number_of_wins + 1)
+                turn.player2.update(number_of_drinks: turn.player2.number_of_drinks + turn.challenge.drinks)
+                turn.update(winner_id: turn.player1_id)
+                update_line(turn)
+
+            elsif turn.vote_p2 > turn.vote_p1
+                turn.player2.update(number_of_wins: turn.player2.number_of_wins + 1)
+                turn.player1.update(number_of_drinks: turn.player1.number_of_drinks + turn.challenge.drinks)
+                turn.update(winner_id: turn.player2_id)
+                update_line(turn)
+            end 
         end
 
     end
@@ -103,6 +109,6 @@ class TurnsController < ApplicationController
    end
 
    def turn_params
-       params.require(:turn).permit(:winner_id, :vote_p1, :vote_p2)
+       params.require(:turn).permit(:vote_p1, :vote_p2)
    end
 end
