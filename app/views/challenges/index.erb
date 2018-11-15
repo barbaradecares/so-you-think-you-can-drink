@@ -1,11 +1,11 @@
-<div><h1>Challenges</h1>
+<div><h1 class="h1cursiveRed">Challenges</h1><br />
+    <button><%=link_to "ADD CUSTOM CHALLENGE", new_challenge_path%></button><br />
+    <button><%=link_to "BACK TO WELCOME PAGE", '/welcome'%></button>
 <ul>
     <% @challenges.each do |challenge| %>
-    
-        <iframe width="560" height="315" src=<%=challenge.video_url%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <li>
-        <p><%=challenge.title%></p>
-
+        <h4 class="h4stencilBlack"><%=challenge.title%></h4>
     </li>
+    <iframe width="560" height="315" src=<%=challenge.video_url%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <% end %>
 </ul></div>
