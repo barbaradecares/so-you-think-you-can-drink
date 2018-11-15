@@ -1,23 +1,23 @@
-<div><h1>Voting</h1>
+<div><h1 class="h1cursiveRed">Voting</h1><br />
 
 <%@voters.each do |voter|%>
-   <p><%=voter.name%> votes for:
+   <p><h4 class="h4stencilBlack"><%=voter.name.upcase%> VOTES FOR: </h4>
 
     <%= form_for @turn do |t| %>
      <%= t.hidden_field :vote_p1, :value=> @turn.vote_p1 + 1 %>
-     <%= t.submit @turn.player1.name %>
+     <%= t.submit @turn.player1.name.upcase %>
    <% end %>
 
    <%= form_for @turn do |t| %>
      <%= t.hidden_field :vote_p2, :value=> @turn.vote_p2 + 1 %>
-     <%= t.submit @turn.player2.name %>
+     <%= t.submit @turn.player2.name.upcase %>
    <% end %></p>
 
 <% end %>
 
  <% if @voters.length <= @turn.vote_p1 + @turn.vote_p2 && @turn.vote_p1 != @turn.vote_p2%>
-        <button><%=link_to "We have a winner!", turn_path(@turn)%></button>
-    
+        <button><%=link_to "WE HAVE A WINNER!", turn_path(@turn)%></button>
+
   <% elsif @voters.length <= @turn.vote_p1 + @turn.vote_p2 && @turn.vote_p1 == @turn.vote_p2 %>
 
     <br/>

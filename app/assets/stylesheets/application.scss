@@ -5,13 +5,41 @@
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
+
+
+h1.h1cursiveBlack{
+  font-family: 'Pacifico', cursive;
+}
+
+h1.h1cursiveRed{
+  font-family: 'Pacifico', cursive;
+  color: red
+}
+
+h1.h1stencilRed{
+  font-family: 'Allerta Stencil', sans-serif;
+  color: red
+}
+
+h2.h2stencilBlack{
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
+h3.h3cursiveBlack{
+  font-family: 'Pacifico', cursive;
+}
+
+h4.h4cursiveBlack{
+  font-family: 'Pacifico', cursive;
+}
+
+h4.h4stencilBlack{
+  font-family: 'Allerta Stencil', sans-serif;
+}
+
 h1.challenge{
   font-family: 'Allerta Stencil', sans-serif;
   padding-left:2em
-}
-
-h4.challenge{
-  font-family: 'Pacifico', cursive;
 }
 
 h3.vs{
@@ -19,14 +47,6 @@ h3.vs{
   padding-left:2em
 }
 
-h1.h1cursiveBlack{
-  font-family: 'Pacifico', cursive;
-}
-
-h1.h1stencilRed{
-  font-family: 'Allerta Stencil', sans-serif;
-  color: red
-}
 h1.nav{
   font-family: 'Allerta Stencil', sans-serif;
   color: white
@@ -43,10 +63,6 @@ h1.player1 {
     animation-iteration-count: infinite;
     color: red
   }
-
-h3.instructions{
-  font-family: 'Pacifico', cursive;
-}
 
 button{
   background-color: black
@@ -66,6 +82,10 @@ a:active{
 input[type=button], input[type=submit]{
   color: white;
    background-color:black;
+}
+
+table{
+  width: 25%;
 }
 
   @keyframes shake {

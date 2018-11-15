@@ -1,6 +1,6 @@
 <h1 class="player1"><%=@player1.name.upcase%></h1> <h3 class="vs">vs.</h3> <h1 class="player1"><%=@player2.name.upcase%></h1>
 <br />
-<div><h4 class="challenge">Challenge: </h4><h1 class="challenge"><%=@challenge.title%></h1></div>
+<div><h4 class="h4cursiveBlack">Challenge: </h4><h1 class="challenge"><%=@challenge.title%></h1></div>
 <br />
 <div><h4><%=@challenge.description%></h4></div>
 <br />
@@ -10,6 +10,6 @@
 
 
 <%= form_for Turn.new do |f| %>
-    <%= f.submit 'Start Voting'%>
+    <%= f.submit 'START VOTING'%>
 <%end%>
 </div>

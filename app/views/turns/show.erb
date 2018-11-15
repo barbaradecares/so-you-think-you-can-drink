@@ -1,25 +1,26 @@
-<div><h1>And the winner is............... </h1>
-<marquee><h1><%=@winner.name%></h2></marquee>
-<h2> <%=@loser.name%> has to take <%=@turn.challenge.drinks %> drinks</h2>
-
+<div><h1 class="h1cursiveBlack">And the winner is............... </h1>
+<marquee behavior="alternate"><h1 class="h1stencilRed"><%=@winner.name.upcase%></h2></marquee>
+<h2 class="h2stencilBlack"> <%=@loser.name.upcase%> has to take <%=@turn.challenge.drinks %> drinks.</h2>
+<br />
 <table>
   <tr>
-    <th>Player Name</th>
-    <th>Wins</th> 
-    <th>Drinks</th>
+    <th>NAME</th>
+    <th>WINS</th>
+    <th>DRINKS</th>
   </tr>
-  
-<%  @ranking.each do |player| %>
+
+<% @ranking.each do |player| %>
     <tr>
-     <td><%=player.name%></td> 
-     <td><%=player.number_of_wins%></td>    
-     <td><%=player.number_of_drinks%></td> 
+     <td><font color="red"><%=player.name.upcase%></font></td>
+     <td><font color="red"><%=player.number_of_wins%></font</td>
+     <td><font color="red"><%=player.number_of_drinks%></font</td>
      </tr>
 <% end %>
-     
+
      </table>
+
 <br /> <br />
-<button><%= link_to "Next round", new_turn_path%></button>
+<button><%= link_to "NEXT ROUND", new_turn_path%></button>
 <br /> <br />
-<button><%= link_to "End Game", turns_path%></button>
+<button><%= link_to "END GAME", turns_path%></button>
 </div>

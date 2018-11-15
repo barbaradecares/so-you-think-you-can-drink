@@ -1,24 +1,24 @@
-<div><h1>Add Players: </h1>
+<div><h1 class="h1cursiveRed">Add Players: </h1><br />
 
 <%=form_for @player do |f|%>
-    <%= f.label 'Name'%>
+    <%= f.label 'Name:'%>
     <%= f.text_field :name%>
-    <%= f.submit%>
+    <%= f.submit 'CREATE PLAYER'%>
 <% end %>
 
 <br /><br />
 
-<h4>List of Players: </h4>
+<h4 class="h4cursiveBlack">List of Players: </h4>
 <ul>
     <%@players.each do |p|%>
-        <li><%=p.name%> <button><%= link_to 'Delete', p,  method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
+        <li><%=p.name.upcase%> <button><%= link_to 'Delete', p,  method: :delete, data: { confirm: 'Are you sure?' } %></button></li>
     <%end%>
 </ul>
 
 <br /><br />
 <% if @players.length >= 3 %>
-  <button><%= link_to 'Begin Battles', '/turns/new'%></button>
+  <button><%= link_to 'BEGIN BATTLES', '/turns/new'%></button>
 <% end %>
 <br /><br />
-<button><%= link_to 'Back to Welcome', '/welcome' %></button>
+<button><%= link_to 'BACK TO WELCOME PAGE', '/welcome' %></button>
 </div>
