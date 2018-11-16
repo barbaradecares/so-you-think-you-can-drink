@@ -28,7 +28,16 @@ Challenge.create(video_url: 'https://www.youtube.com/embed/4V90AmXnguw', drinks:
 Challenge.create(video_url: 'https://www.youtube.com/embed/umj0gu5nEGs', drinks: 3, title: 'Time Warp', description: "You\'re just some sweet transvestites for this one. Do the Time Warp! Worth 3 drinks.")
 Challenge.create(video_url: 'https://www.youtube.com/embed/Vc0gYbTNctU', drinks: 1, title: 'Y.M.C.A.', description: "Alright, boys and girls. Worth 1 drink.")
 
-
-Challenge.create(video_url: 'https://www.youtube.com/embed/uS8fYjT9bfc', drinks: 3, title: 'Dança Da Maozinha', description: "A delightful Brazilian classic. Worth 3 drinks (if you survive).")
+Challenge.create(video_url: 'https://www.youtube.com/embed/uS8fYjT9bfc', drinks: 4, title: 'Dança Da Maozinha', description: "A delightful Brazilian classic. Worth 4 drinks (if you survive).")
 Challenge.create(video_url: 'https://www.youtube.com/embed/iTtmlGEXzY8', drinks: 4, title: 'Vai Malandra', description: "A Brazilian modern hit with a funky twist. Extra points for freestyling. Worth 4 drinks, you better do your best.")
 Challenge.create(video_url: 'https://www.youtube.com/embed/eh4QQJyl-qA', drinks: 2, title: 'Bum Bum Tam Tam', description: "Titillate us with your bum bum tam tam. Worth 2 drinks.")
+
+Challenge.create(video_url: 'https://www.youtube.com/embed/PtFrmSuBXtE', drinks: 3, title: 'Shake Body', description: "Shake your body with this tasty Nigerian jam. Worth 3 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/ZRqCRMKk2A4', drinks: 2, title: 'Otso Otso', description: "Four plus four equals otso otso otso! Worth 2 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/yInIPEJ4Ly0', drinks: 2, title: 'IDOL', description: "Lil' bit of k-pop for ya. Worth 2 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/Dh-ULbQmmF8', drinks: 3, title: 'Level Up', description: "Time to level up, ladiessss!!!! And gents... Worth 3 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/a8M6EaKJTPY', drinks: 2, title: 'Abracadabra', description: "Make some magic on the dance floor, babies. Worth 2 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/TbSI5hLzSbY', drinks: 3, title: 'Skelewu', description: "Time to learn the Skelewu! Worth 3 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/7hb-yqY7IPQ', drinks: 2, title: 'Kukere', description: "This one shouldn't be too hard, babies. Worth 2 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/lYGj8pT_w3Y', drinks: 2, title: 'Johnny', description: "Throw down. Worth 2 drinks.")
+Challenge.create(video_url: 'https://www.youtube.com/embed/ixkoVwKQaJg', drinks: 3, title: 'Taki Taki', description: "Taki taki taki taki taki. Worth 3 drinks.")
