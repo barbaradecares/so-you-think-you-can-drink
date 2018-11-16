@@ -4,11 +4,11 @@
 
 GAME APP NAME:   `So-You-Think-You-Can-Drink`
 
-Fork and clone repo (so-you-think-you-can-drink) from github. Once opened in your IDE, run migrations and seed. Open your local sever and have fun.
+Fork and clone repo (so-you-think-you-can-drink) from GitHub. Once opened in your IDE, run migrations and seed. Open your local sever and have fun.
 
 ## Objectives
 
-This game app is created for minimum of three(3) playerss to compete through dance battles (which involves a variety of dance genres) and the loser consumes few drinks. Two(2) players to battle and the other players vote.
+This game app is created for minimum of three(3) players to compete through dance battles (which involves a variety of dance genres) and the loser consumes few drinks. Two(2) players to battle and the other players vote.
 
 ## Overview
 We used ruby on rails, a web application framework to create our application.
